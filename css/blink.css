@@ -1,0 +1,330 @@
+/*flashy/blink animations here*/
+/*BLINK ANIMATIONS*/
+@keyframes blink1 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  14.2% {
+    opacity: var(--randomnum1);
+  }
+  28.4% {
+    opacity: 0;
+  }
+  42.6% {
+    opacity: var(--randomnum2);
+  }
+  56.8% {
+    opacity: 0;
+  }
+  71% {
+    opacity: var(--randomnum3);
+  }
+  85.2% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim1 {
+  /*The element to apply the animation to (logo)*/
+  animation-name: blink1;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink2 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: var(--randomnum3);
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: var(--randomnum5);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim2 {
+  /*The element to apply the animation to (page title)*/
+  animation-name: blink2;
+  animation-duration: 0.22s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink31 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: var(--randomnum1);
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim31 {
+  /*The element to apply the animation to (orange navbar buttons)*/
+  animation-name: blink31;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink32 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: var(--randomnum2);
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim32 {
+  /*The element to apply the animation to (orange navbar buttons)*/
+  animation-name: blink32;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink33 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: var(--randomnum3);
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim33 {
+  /*The element to apply the animation to (orange navbar buttons)*/
+  animation-name: blink33;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink34 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: var(--randomnum4);
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim34 {
+  /*The element to apply the animation to (orange navbar buttons)*/
+  animation-name: blink34;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink35 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: var(--randomnum5);
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim35 {
+  /*The element to apply the animation to (orange navbar buttons)*/
+  animation-name: blink35;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink41 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: var(--randomnum6);
+  }
+  92.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim41 {
+  /*The element to apply the animation to (blue navbar buttons)*/
+  animation-name: blink41;
+  animation-duration: 0.35s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink42 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: var(--randomnum7);
+  }
+  92.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim42 {
+  /*The element to apply the animation to (blue navbar buttons)*/
+  animation-name: blink42;
+  animation-duration: 0.35s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink43 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: var(--randomnum4);
+  }
+  92.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim43 {
+  /*The element to apply the animation to (blue navbar buttons)*/
+  animation-name: blink43;
+  animation-duration: 0.35s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink44 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: var(--randomnum3);
+  }
+  92.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim44 {
+  /*The element to apply the animation to (blue navbar buttons)*/
+  animation-name: blink44;
+  animation-duration: 0.35s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink5 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: var(--randomnum1);
+  }
+  85% {
+    opacity: 0;
+  }
+  90% {
+    opacity: var(--randomnum2);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim5 {
+  /*The element to apply the animation to (content box)*/
+  animation-name: blink5;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
+
+@keyframes blink6 {
+  /* The animation code */
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: var(--randomnum3);
+  }
+  88.75% {
+    opacity: 0;
+  }
+  92.5% {
+    opacity: var(--randomnum4);
+  }
+  96.25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.blinkanim6 {
+  /*The element to apply the animation to (content inside of the box)*/
+  animation-name: blink6;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(1);
+}
