@@ -16,10 +16,11 @@ html {
 }
 
 /* WTFPL styling */
-.WTFPL ::before {
+
+.WTFPL a::before {
   content: none;
 }
-.WTFPL ::after {
+.WTFPL a::after {
   content: none;
 }
 
@@ -93,11 +94,11 @@ summary:before {
 }
 
 a:before {
-  content: " «";
+  content: "«";
 }
 
 a:after {
-  content: "» ";
+  content: "»";
 }
 
 /* Hover effects */
