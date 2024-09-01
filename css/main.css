@@ -15,6 +15,25 @@ html {
   overflow: hidden;
 }
 
+/* WTFPL styling */
+.WTFPL ::before {
+  content: none;
+}
+.WTFPL ::after {
+  content: none;
+}
+
+.WTFPL svg {
+  fill: var(--text-color);
+  filter: drop-shadow(0 0 2px var(--text-shadow-color))
+    drop-shadow(0 0 12px var(--text-shadow-color));
+}
+.WTFPL :hover {
+  fill: var(--bg-color);
+  filter: drop-shadow(0 0 2px var(--bg-color))
+    drop-shadow(0 0 12px var(--bg-color));
+}
+
 body {
   background: var(--bg-color);
   font-weight: normal;
@@ -150,6 +169,17 @@ priv:hover {
   }
 }
 
+.license {
+  font-size: 2vw;
+  margin: 0;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 1000px) {
   body,
@@ -168,6 +198,11 @@ priv:hover {
     font-size: 6vw;
     margin: 0 1ch 0 1ch;
   }
+  .license {
+    font-size: 5vw;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -185,6 +220,11 @@ priv:hover {
     font-size: 6vw;
     margin: 0 1ch 0 1ch;
   }
+  .license {
+    font-size: 5vw;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 @keyframes slideUp {
@@ -194,4 +234,16 @@ priv:hover {
   to {
     transform: translateY(0);
   }
+}
+.hidden {
+  color: transparent;
+  text-shadow: none;
+  background: none;
+}
+.hidden :hover {
+  color: var(--bg-color);
+  background: var(--text-shadow-color);
+  box-shadow: 0 0 2px var(--text-shadow-color),
+    0 0 12px var(--text-shadow-color);
+  text-shadow: 0 0 2px var(--bg-color), 0 0 12px var(--bg-color);
 }
