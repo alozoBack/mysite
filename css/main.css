@@ -1,26 +1,22 @@
-/* + cookies-notify */
 :root {
   --bg-color: #010;
   --bg-color-faded: rgba(50, 70, 50, 0.5);
   --text-color: rgba(125, 213, 130, 0.5);
   --text-shadow-color: rgba(125, 213, 130, 1);
 }
+
+/* Scrollbar hidden */
 ::-webkit-scrollbar {
   width: 0;
 }
+
+/* General resets and styling */
 html {
   overflow: hidden;
 }
+
 body {
   background: var(--bg-color);
-}
-body,
-h1,
-p,
-a,
-g,
-priv,
-summary {
   font-weight: normal;
   padding: 0;
   margin: 0;
@@ -28,6 +24,28 @@ summary {
   color: var(--text-color);
   text-shadow: 0 0 2px var(--text-shadow-color),
     0 0 12px var(--text-shadow-color);
+  transform: skewX(0.1deg);
+}
+
+/* Elements styling */
+h1,
+p,
+a,
+summary,
+g,
+priv {
+  font-size: 3vw;
+  font-weight: normal;
+  margin: 0;
+  font-family: "VT323", monospace;
+  color: var(--text-color);
+  text-shadow: 0 0 2px var(--text-shadow-color),
+    0 0 12px var(--text-shadow-color);
+}
+
+.b1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 summary,
 a,
@@ -39,83 +57,73 @@ priv {
   text-decoration: none;
   transition: all 0.25s ease-in-out;
 }
-cock {
-  overflow: hidden;
-}
 
+/* Custom content before elements */
 ul {
   margin: 0 0 1em;
   list-style: none;
 }
+
 ul li::before {
   content: "¤ ";
+  animation: blink6 0.5s steps(1) 1;
 }
+
 summary:before {
   content: "> ";
 }
+
 a:before {
   content: " «";
 }
+
 a:after {
   content: "» ";
 }
+
+/* Hover effects */
+summary:hover,
+a:hover,
+g:hover,
 priv:hover {
   color: var(--bg-color);
   background: var(--text-shadow-color);
-  color: var(--bg-color-faded);
   box-shadow: 0 0 2px var(--text-shadow-color),
     0 0 12px var(--text-shadow-color);
   text-shadow: 0 0 2px var(--bg-color), 0 0 12px var(--bg-color);
 }
-g:hover {
-  color: var(--bg-color);
-  background: var(--text-shadow-color);
-  color: var(--bg-color-faded);
-  box-shadow: 0 0 2px var(--text-shadow-color),
-    0 0 12px var(--text-shadow-color);
-  text-shadow: 0 0 2px var(--bg-color), 0 0 12px var(--bg-color);
-}
-summary:hover,
-a:hover {
-  color: var(--bg-color);
-  background: var(--text-shadow-color);
-  color: var(--bg-color-faded);
-  box-shadow: 0 0 2px var(--text-shadow-color),
-    0 0 12px var(--text-shadow-color);
-  text-shadow: 0 0 2px var(--bg-color), 0 0 12px var(--bg-color);
-}
-section {
-  padding-bottom: 1em;
-}
+
+/* Screen styling */
 .screen {
   margin: auto;
   width: 40ch;
-  //white-space: pre;
+  font-size: 3vw;
   animation: glow 7s infinite alternate ease-in;
 }
-.screen > p {
-  margin: 0;
-  padding-bottom: 1em;
-}
-p.no-break {
-  padding: 0;
-}
+
+/* Centered content */
 .center {
   text-align: center;
 }
+
+/* Pulsing effect */
+.pulse {
+  animation: pulse 1.5s ease-in infinite;
+  opacity: 1;
+}
+
+/* Borders */
 .border:before {
   content: "** ";
   float: left;
 }
+
 .border:after {
   content: " **";
   float: right;
 }
-.pulse {
-  animation: pulse 1.5s ease-in;
-  animation-iteration-count: infinite;
-  opacity: 1;
-}
+
+/* Keyframes for animations */
 @keyframes pulse {
   40% {
     opacity: 1;
@@ -142,6 +150,7 @@ p.no-break {
   }
 }
 
+/* Responsive adjustments */
 @media screen and (max-width: 1000px) {
   body,
   h1,
@@ -151,235 +160,38 @@ p.no-break {
   g,
   priv,
   summary {
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
-    font-family: "VT323", monospace;
-    transform: skewx(0.1deg);
-    color: var(--text-color);
-    text-shadow: 0 0 2px var(--text-shadow-color),
-      0 0 12px var(--text-shadow-color);
+    margin: auto;
+    font-size: 6vw;
   }
-}
 
-:root {
-  --bg-color: #010;
-  --bg-color-faded: rgba(50, 70, 50, 0.5);
-  --text-color: rgba(125, 213, 130, 0.5);
-  --text-shadow-color: rgba(125, 213, 130, 1);
-}
-body {
-  background: var(--bg-color);
-}
-
-body {
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
-  font-family: "VT323", monospace;
-  transform: skewx(0.1deg);
-  color: var(--text-color);
-  text-shadow: 0 0 2px var(--text-shadow-color),
-    0 0 12px var(--text-shadow-color);
-}
-.screen {
-  font-size: 3vw;
-}
-
-h1,
-p,
-a,
-summary {
-  font-size: 3vw;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
-  font-family: "VT323", monospace;
-  transform: skewx(0.1deg);
-  color: var(--text-color);
-  text-shadow: 0 0 2px var(--text-shadow-color),
-    0 0 12px var(--text-shadow-color);
-}
-
-p1,
-g,
-priv {
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
-  font-family: "VT323", monospace;
-  transform: skewx(0.1deg);
-  color: var(--text-color);
-  text-shadow: 0 0 2px var(--text-shadow-color),
-    0 0 12px var(--text-shadow-color);
-}
-summary,
-a,
-g,
-priv {
-  list-style: none;
-  cursor: pointer;
-  padding: 0 1ch;
-  text-decoration: none;
-  transition: all 0.25s ease-in-out;
-}
-
-ul {
-  margin: 0 0 1em;
-  list-style: none;
-}
-ul li::before {
-  animation-name: blink6;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-timing-function: steps(1);
-  content: "¤ ";
-}
-summary:before {
-  content: "> ";
-}
-a:before {
-  content: " «";
-}
-
-a:after {
-  content: "» ";
-}
-summary:hover,
-a:hover {
-  color: var(--bg-color);
-  background: var(--text-shadow-color);
-  color: var(--bg-color-faded);
-  box-shadow: 0 0 2px var(--text-shadow-color),
-    0 0 12px var(--text-shadow-color);
-  text-shadow: 0 0 2px var(--bg-color), 0 0 12px var(--bg-color);
-}
-g:hover {
-  color: var(--bg-color);
-  background: var(--text-shadow-color);
-  color: var(--bg-color-faded);
-  box-shadow: 0 0 2px var(--text-shadow-color),
-    0 0 12px var(--text-shadow-color);
-  text-shadow: 0 0 2px var(--bg-color), 0 0 12px var(--bg-color);
-}
-priv:hover {
-  color: var(--bg-color);
-  background: var(--text-shadow-color);
-  color: var(--bg-color-faded);
-  box-shadow: 0 0 2px var(--text-shadow-color),
-    0 0 12px var(--text-shadow-color);
-  text-shadow: 0 0 2px var(--bg-color), 0 0 12px var(--bg-color);
-}
-
-section {
-  padding-bottom: 1em;
-}
-.screen {
-  margin: auto;
-  width: 40ch;
-  //white-space: pre;
-  animation: glow 7s infinite alternate ease-in;
-}
-.screen > p {
-  margin: 0;
-  padding-bottom: 1em;
-}
-p.no-break {
-  padding: 0;
-}
-.center {
-  text-align: center;
-}
-.border:before {
-  content: "** ";
-  float: left;
-}
-.border:after {
-  content: " **";
-  float: right;
-}
-.pulse {
-  animation: pulse 1.5s ease-in;
-  animation-iteration-count: infinite;
-  opacity: 1;
-}
-@keyframes pulse {
-  40% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  85% {
-    opacity: 0.1;
-  }
-  85% {
-    opacity: 1;
-  }
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 2px var(--text-shadow-color),
-      0 0 12px var(--text-shadow-color);
-  }
-  to {
-    text-shadow: 0 0 1px var(--text-shadow-color),
-      0 0 6px var(--text-shadow-color);
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  body {
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
-    font-family: "VT323", monospace;
-    transform: skewx(0.1deg);
-    color: var(--text-color);
-    text-shadow: 0 0 2px var(--text-shadow-color),
-      0 0 12px var(--text-shadow-color);
-  }
   .screen {
-    font-size: 3vw;
+    font-size: 6vw;
+    margin: 0 1ch 0 1ch;
   }
+}
 
+@media screen and (max-width: 600px) {
+  body,
   h1,
   p,
   a,
+  g,
+  priv,
   summary {
-    font-size: 4vw;
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
-    font-family: "VT323", monospace;
-    transform: skewx(0.1deg);
-    color: var(--text-color);
-    text-shadow: 0 0 2px var(--text-shadow-color),
-      0 0 12px var(--text-shadow-color);
+    margin: auto;
+    font-size: 6vw;
   }
-  p1 {
-    font-size: 1vw;
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
-    font-family: "VT323", monospace;
-    transform: skewx(0.1deg);
-    color: var(--text-color);
-    text-shadow: 0 0 2px var(--text-shadow-color),
-      0 0 12px var(--text-shadow-color);
+  .screen {
+    font-size: 6vw;
+    margin: 0 1ch 0 1ch;
   }
 }
 
-g,
-priv {
-  font-size: 100%;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
-  font-family: "VT323", monospace;
-  transform: skewx(0.1deg);
-  color: var(--text-color);
-  text-shadow: 0 0 2px var(--text-shadow-color),
-    0 0 12px var(--text-shadow-color);
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
