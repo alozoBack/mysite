@@ -26,11 +26,13 @@ html {
 
 .WTFPL svg {
   fill: var(--text-color);
+
   filter: drop-shadow(0 0 2px var(--text-shadow-color))
     drop-shadow(0 0 12px var(--text-shadow-color));
 }
-.WTFPL :hover {
-  fill: var(--bg-color);
+.WTFPL:hover {
+  --text-color: var(--bg-color);
+
   filter: drop-shadow(0 0 2px var(--bg-color))
     drop-shadow(0 0 12px var(--bg-color));
 }
