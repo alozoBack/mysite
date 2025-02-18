@@ -250,3 +250,99 @@ priv:hover {
     0 0 12px var(--text-shadow-color);
   text-shadow: 0 0 2px var(--bg-color), 0 0 12px var(--bg-color);
 }
+
+.audio-player {
+  width: 500px;
+  height: 180px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px;
+  background: var(--bg-color);
+  border: none
+}
+
+#play-pause {
+  size: 100%;
+  font-size: 6vw;
+  font-weight: normal;
+  margin: 0;
+  font-family: "VT323", monospace;
+  color: var(--text-color);
+  text-shadow: 0 0 2px var(--text-shadow-color),
+    0 0 12px var(--text-shadow-color);
+    list-style: none;
+  cursor: pointer;
+  padding: 0 1ch;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  background: var(--bg-color);
+  border-width: 10px;
+  border-color: var(--text-color);
+}
+
+#play-pause:hover {
+  color: var(--bg-color);
+  background: var(--text-shadow-color);
+  box-shadow: 0 0 2px var(--text-shadow-color),
+    0 0 12px var(--text-shadow-color);
+  text-shadow: 0 0 2px var(--bg-color), 0 0 12px var(--bg-color);
+}
+
+
+/* Customizing the slider */
+.controls {
+  padding-top: 1em;
+  height: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: center;
+}
+
+.slider {
+  margin-left: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 130%;
+  max-height: 250px; /* Prevents it from becoming too large */
+  writing-mode: vertical-lr;
+  direction: rtl;
+  background: var(--bg-color);
+  border: 5px solid var(--text-color);
+  writing-mode: bt-lr; /* Vertical slider */
+  transform: rotate(180deg);
+}
+
+
+
+/* Customizing the slider thumb */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  border: 5px solid var(--text-color);
+  background-color: var(--text-color);
+  box-shadow: 0 0 2px var(--text-shadow-color),
+  0 0 12px var(--text-shadow-color);
+  list-style: none;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  border: 3px solid var(--text-color);
+  background-color: var(--text-color);
+  box-shadow: 0 0 2px var(--text-shadow-color),
+  0 0 12px var(--text-shadow-color);
+  list-style: none;
+  cursor: pointer;
+}
+
+
+
+
